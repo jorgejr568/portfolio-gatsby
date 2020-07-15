@@ -1,0 +1,33 @@
+@import "minimalism";
+
+header.header{
+  margin: auto;
+  width: 100%;
+  max-width: 1000px;
+  a.brand{
+    h1{
+      font-size: calc(var(--font-size) * var(--font-scale-xl));
+      text-transform: lowercase;
+    }
+  }
+
+  button{
+    cursor: pointer;
+  }
+}
+
+footer.legal{
+  padding: .4rem 0 ;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  p{
+    padding: .4rem 0 0 0;
+    border-top: 1px solid var(--c-text);
+    color: var(--c-text);
+    text-align: center;
+  }
+}

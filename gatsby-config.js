@@ -1,16 +1,27 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Jorge Junior.`,
+    description: `I am a full-stack developer with more than 5 years of experience in web development and
+          infrastructure. I worked in many applications using PHP as the main technology, but I am always
+          willing and in fact even more motivated to work with other languages. I have solid knowledge in
+          functional programming, OOP, DevOps, PHP and Javascript (Vue and React). I am interested in
+          learning
+          technologies, best development practices, TDD and multi-platform development.`,
+    author: 'Jorge Junior <jorge.junior.568@live.com> @jorgejr568',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -24,7 +35,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/favicon.png`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -1,0 +1,17 @@
+
+
+@media screen and (max-width: 991px) {
+  header.header{
+    .brand{
+      margin-bottom: .6rem;
+    }
+  }
+
+  footer.legal {
+    padding-left: 28px;
+    padding-right: 28px;
+    p {
+      width: 100%;
+    }
+  }
+}

@@ -5,3 +5,18 @@
  */
 
 // You can delete this file if you're not using it
+const createLinksSchema = require('./.gatsby/schema-creators/Links')
+const createLinksNodes = require('./.gatsby/node-creators/Links')
+
+
+exports.createSchemaCustomization = ({ actions: {createTypes}}) => {
+  createLinksSchema(createTypes);
+}
+
+exports.sourceNodes = async ({
+  actions: { createNode },
+  createContentDigest,
+  createNodeId,
+}) => {
+  await createLinksNodes(createNode, createNodeId, createContentDigest)
+}
