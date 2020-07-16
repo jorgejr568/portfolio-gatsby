@@ -11,10 +11,14 @@ const createLinksNodes = require('./.gatsby/node-creators/Links')
 const createExperiencesSchema = require('./.gatsby/schema-creators/Experiences')
 const createExperiencesNodes = require('./.gatsby/node-creators/Experiences')
 
+const createEducationsSchema = require('./.gatsby/schema-creators/Educations')
+const createEducationsNodes = require('./.gatsby/node-creators/Educations')
+
 
 exports.createSchemaCustomization = ({ actions: {createTypes}}) => {
   createLinksSchema(createTypes);
   createExperiencesSchema(createTypes);
+  createEducationsSchema(createTypes);
 }
 
 exports.sourceNodes = async ({
@@ -24,4 +28,5 @@ exports.sourceNodes = async ({
 }) => {
   await createLinksNodes(createNode, createNodeId, createContentDigest)
   await createExperiencesNodes(createNode, createNodeId, createContentDigest)
+  await createEducationsNodes(createNode, createNodeId, createContentDigest)
 }

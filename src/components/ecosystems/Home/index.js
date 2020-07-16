@@ -4,6 +4,7 @@ import MeSection from "../../molecules/MeSection"
 import "./style.scss"
 import SEO from "../../atoms/SEO"
 import ExperienceSection from "../../molecules/ExperienceSection"
+import EducationSection from "../../molecules/EducationSection"
 
 function Home() {
   return (
@@ -11,8 +12,8 @@ function Home() {
       <SEO title="Jorge Junior - Portfolio" />
       <main id="homePage">
         <MeSection />
-
         <ExperienceSection />
+        <EducationSection />
       </main>
     </Layout>
   )
