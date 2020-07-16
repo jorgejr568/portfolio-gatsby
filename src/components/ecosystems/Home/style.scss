@@ -87,7 +87,7 @@
           flex-basis: 100%;
         }
 
-        h4{
+        a, h4{
           text-align: center;
           + h4{
             margin-left: .4rem;
@@ -95,7 +95,6 @@
           font-size: calc(var(--font-size) * var(--font-scale-s));
           line-height: .8rem;
           display: inline-block;
-          text-align: center;
           border: 1px solid var(--c-text);
           color: var(--c-text);
           background-color: #fff;
