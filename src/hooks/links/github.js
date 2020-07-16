@@ -3,10 +3,10 @@ import { useStaticQuery, graphql } from "gatsby"
 const useGithubLink = () => {
   const {allLinks: {nodes: [github_link]}} = useStaticQuery(graphql`
   query {
-    allLinks(filter: {linkId: {eq: "github"}}) {
+    allLinks(filter: {link_id: {eq: "github"}}) {
       nodes {
         id
-        linkId
+        link_id
         link
       }
     }

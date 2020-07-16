@@ -11,7 +11,7 @@ module.exports = async (createNode, createNodeId, createContentDigest) => {
   links.forEach((link) => {
     createNode({
       id: createNodeId(`Links-${link.id}`),
-      linkId: link.id,
+      link_id: link.id,
       parent: null,
       children: [],
       internal: {
