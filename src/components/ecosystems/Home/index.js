@@ -5,6 +5,7 @@ import "./style.scss"
 import SEO from "../../atoms/SEO"
 import ExperienceSection from "../../molecules/ExperienceSection"
 import EducationSection from "../../molecules/EducationSection"
+import SkillSection from "../../molecules/SkillSection"
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
         <MeSection />
         <ExperienceSection />
         <EducationSection />
+        <SkillSection />
       </main>
     </Layout>
   )

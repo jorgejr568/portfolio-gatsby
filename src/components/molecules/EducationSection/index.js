@@ -3,7 +3,6 @@ import useEducations from "../../../hooks/educations"
 
 function EducationSection() {
   const educations = useEducations();
-  console.log(educations)
 
   return (
     <section id='education'>

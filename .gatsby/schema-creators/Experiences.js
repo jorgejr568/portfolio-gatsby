@@ -11,8 +11,8 @@ module.exports = (createTypes) => {
       frameworks: [String!]!
       started_at: Date!
       finished_at: Date
-      created_at: Date!
-      updated_at: Date!
+      created_at: String!
+      updated_at: String!
     }    
   `)
 }
