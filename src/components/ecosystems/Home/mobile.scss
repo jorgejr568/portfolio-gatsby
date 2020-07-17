@@ -1,0 +1,38 @@
+@media screen and (max-width: 991px) {
+  #homePage{
+    section{
+      padding: 1.5rem 0;
+    }
+    #presentation{
+      img{
+        margin-right: 0;
+        margin-bottom: 24px;
+      }
+
+      #presentationLinks{
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    #experience{
+      > ul > li  ul{
+        list-style-type: none;
+        padding-left: 0;
+        margin-left: 0;
+      }
+    }
+
+    #skills{
+      > ul{
+        grid-template-columns: repeat(1, 1fr);
+        gap: .4rem;
+
+        li:nth-child(2){
+          grid-row: auto;
+          grid-column: 1;
+        }
+      }
+    }
+  }
+}

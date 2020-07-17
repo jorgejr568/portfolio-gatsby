@@ -56,6 +56,7 @@ function ContactForm() {
           placeholder="Your e-mail"
           value={contactEmail}
           onChange={e => setContactEmail(e.target.value)}
+          aria-label="Your e-mail"
           maxLength="191"
         />
         <span>{contactEmail.length}/191</span>
@@ -68,6 +69,7 @@ function ContactForm() {
           onChange={e => setContactMessage(e.target.value)}
           placeholder="Your message"
           maxLength="2048"
+          aria-label="Your message"
         />
         <span>{contactMessage.length}/2048</span>
 

@@ -24,14 +24,16 @@
   font-family: "TT Commons";
   font-weight: 400;
   font-style: normal;
-  src: url("../fonts/minimalism/49cc93253e551e63c6f08417f5612f65.woff2") format("woff2")
+  src: url("../fonts/minimalism/49cc93253e551e63c6f08417f5612f65.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "TT Commons";
   font-weight: 600;
   font-style: normal;
-  src: url("../fonts/minimalism/04fd942cf91603f224424f11281804af.woff2") format("woff2")
+  src: url("../fonts/minimalism/04fd942cf91603f224424f11281804af.woff2") format("woff2");
+  font-display: swap;
 }
 
 :root {
