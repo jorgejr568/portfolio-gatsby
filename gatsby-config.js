@@ -36,6 +36,9 @@ module.exports = {
         theme_color: `#222222`,
         display: `minimal-ui`,
         icon: `src/assets/images/favicon.png`,
+        icon_options: {
+          purpose: `maskable`,
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
