@@ -1,12 +1,11 @@
-import React from "react"
-import {FaFile, FaGithub, FaLinkedinIn} from "react-icons/all";
-import useCurriculumLink from "../../../hooks/links/curriculum"
-import useGithubLink from "../../../hooks/links/github"
-import useLinkedinLink from "../../../hooks/links/linkedin"
-import ProfileImage from "../../atoms/ProfileImage"
+import React from 'react'
+import { FaFile, FaGithub, FaLinkedinIn } from 'react-icons/all'
+import useGithubLink from '../../../hooks/links/github'
+import useLinkedinLink from '../../../hooks/links/linkedin'
+import ProfileImage from '../../atoms/ProfileImage'
+const curriculumLink = require('../../../assets/documents/curriculum.2fb1bd8b.pdf')
 
-function MeSection () {
-  const curriculumLink = useCurriculumLink()
+function MeSection() {
   const githubLink = useGithubLink()
   const linkedinLink = useLinkedinLink()
 
@@ -18,12 +17,13 @@ function MeSection () {
 
       <article>
         <p>
-          I am a full-stack developer with more than 5 years of experience in web development and
-          infrastructure. I worked in many applications using PHP as the main technology, but I am always
-          willing and in fact even more motivated to work with other languages. I have solid knowledge in
-          functional programming, OOP, DevOps, PHP and Javascript (Vue and React). I am interested in
-          learning
-          technologies, best development practices, TDD and multi-platform development.
+          I am a full-stack developer with more than 5 years of experience in
+          web development and infrastructure. I worked in many applications
+          using PHP as the main technology, but I am always willing and in fact
+          even more motivated to work with other languages. I have solid
+          knowledge in functional programming, OOP, DevOps, PHP and Javascript
+          (Vue and React). I am interested in learning technologies, best
+          development practices, TDD and multi-platform development.
         </p>
 
         <p id={'presentationLinks'}>
@@ -31,24 +31,27 @@ function MeSection () {
             href={linkedinLink}
             target={'_blank'}
             rel="noopener noreferrer"
-            title={'Linkedin'}>
-            <FaLinkedinIn size={18}/>
+            title={'Linkedin'}
+          >
+            <FaLinkedinIn size={18} />
           </a>
 
           <a
             href={githubLink}
             target={'_blank'}
             rel="noopener noreferrer"
-            title={'Github'}>
-            <FaGithub size={18}/>
+            title={'Github'}
+          >
+            <FaGithub size={18} />
           </a>
 
           <a
             href={curriculumLink}
             target={'_blank'}
             rel="noopener noreferrer"
-            title={'Download my curriculum'}>
-            <FaFile size={18}/>
+            title={'Download my curriculum'}
+          >
+            <FaFile size={18} />
           </a>
         </p>
       </article>
