@@ -13,6 +13,7 @@ import Footer from '../Footer'
 import NavBar from '../NavBar'
 import '../../../assets/styles/app.scss'
 import CacheMeta from '../../atoms/CacheMeta'
+import { RainbowBar } from "../../molecules/RainbowBar/RainbowBar"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,6 +29,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <CacheMeta />
+      <RainbowBar />
       <NavBar siteTitle={data.site.siteMetadata.title} />
       {children}
       <Footer />
