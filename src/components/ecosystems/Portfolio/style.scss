@@ -1,0 +1,80 @@
+#portfolioPage{
+  section {
+    display: flex;
+    box-sizing: border-box;
+    padding: 1rem 0;
+  }
+  #projects{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      flex-basis: 100%;
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: calc(var(--font-size) * var(--font-scale-xxl));
+    }
+
+    > ul{
+      list-style-type: none;
+      margin-left: 0;
+    }
+
+    > div{
+      display: flex;
+      justify-content: center;
+
+      div{
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        border-top: 1px solid #0d0d0d;
+        min-width: 30vw;
+        a{
+          font-size: 48px;
+          & + a{
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+
+    .project-item{
+      &.active{
+        display: flex;
+      }
+      width: 80vw;
+      margin: 2rem 0 1rem 0;
+      display: none;
+      align-items: flex-start;
+      > div:first-child{
+        margin-right: 16px;
+      }
+      > div:last-child{
+        h3{
+          font-size: 21px;
+        }
+        h4{
+          font-size: 17px;
+        }
+
+        ul{
+          margin-top: 10px;
+          margin-left: 15px;
+        }
+
+        p{
+          margin-top: 20px;
+          text-align: left;
+
+          a + a{
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+  }
+}

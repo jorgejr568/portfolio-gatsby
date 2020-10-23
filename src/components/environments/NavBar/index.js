@@ -9,16 +9,9 @@ export default function NavBar({ siteTitle }) {
         <h1>{siteTitle}</h1>
       </Link>
 
-      <button
-        className="button button-solid"
-        type={'button'}
-        onClick={e => {
-          e.preventDefault()
-          alert("We're still building this part")
-        }}
-      >
+      <Link className="button button-solid" type={'button'} to={'/portfolio'}>
         portfolio
-      </button>
+      </Link>
     </header>
   )
 }

@@ -17,12 +17,14 @@ const createEducationsNodes = require('./.gatsby/node-creators/Educations')
 const createSkillsSchema = require('./.gatsby/schema-creators/Skills')
 const createSkillsNodes = require('./.gatsby/node-creators/Skills')
 
+const path = require('path')
+const projects = require('./src/data/projects')
 
-exports.createSchemaCustomization = ({ actions: {createTypes}}) => {
-  createLinksSchema(createTypes);
-  createExperiencesSchema(createTypes);
-  createEducationsSchema(createTypes);
-  createSkillsSchema(createTypes);
+exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
+  createLinksSchema(createTypes)
+  createExperiencesSchema(createTypes)
+  createEducationsSchema(createTypes)
+  createSkillsSchema(createTypes)
 }
 
 exports.sourceNodes = async ({
@@ -34,4 +36,20 @@ exports.sourceNodes = async ({
   await createExperiencesNodes(createNode, createNodeId, createContentDigest)
   await createEducationsNodes(createNode, createNodeId, createContentDigest)
   await createSkillsNodes(createNode, createNodeId, createContentDigest)
+}
+
+exports.createPages = ({ actions }) => {
+  const { createPage } = actions
+
+  return projects.map(project => {
+    return createPage({
+      path: `/portfolio/${project.slug}`,
+      component: path.resolve(
+        './src/components/ecosystems/PortfolioProject/index.js'
+      ),
+      context: {
+        project,
+      },
+    })
+  })
 }
