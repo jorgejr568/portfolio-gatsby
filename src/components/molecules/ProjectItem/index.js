@@ -1,6 +1,5 @@
 import React from 'react'
 import { object, string } from 'prop-types'
-import { Link } from 'gatsby'
 import { BrowserWindow } from '../BrowserWindow'
 
 const DemoLink = ({ project }) => {

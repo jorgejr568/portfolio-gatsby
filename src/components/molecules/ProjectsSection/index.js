@@ -20,13 +20,13 @@ export const ProjectsSection = () => {
 
       <div style={{ flexBasis: '100%' }}>
         <div>
-          <a href="#" onClick={e => e.preventDefault() & prevPage()}>
+          <button type="button" onClick={e => e.preventDefault() & prevPage()}>
             &lt;
-          </a>
+          </button>
 
-          <a href="#" onClick={e => e.preventDefault() & nextPage()}>
+          <button type="button" onClick={e => e.preventDefault() & nextPage()}>
             &gt;
-          </a>
+          </button>
         </div>
       </div>
 
@@ -36,7 +36,7 @@ export const ProjectsSection = () => {
             <ProjectItem
               project={project}
               key={index}
-              className={activeProject === index && 'active'}
+              className={activeProject === index ? 'active' : ''}
             />
           ))}
         </li>
