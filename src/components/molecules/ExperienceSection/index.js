@@ -1,6 +1,17 @@
 import React from 'react'
 import useExperiences from '../../../hooks/experiences'
 
+function ExperienceDate({ experience }) {
+  if (experience.started_at === experience.finished_at) {
+    return <h4>{experience.started_at}</h4>
+  }
+
+  return (
+    <h4>
+      {experience.started_at} - {experience.finished_at ?? 'currently'}
+    </h4>
+  )
+}
 function ExperienceSection() {
   const experiences = useExperiences()
 
@@ -20,9 +31,7 @@ function ExperienceSection() {
             >
               {experience.company_name.toLowerCase()}
             </a>
-            <h4>
-              {experience.started_at} - {experience.finished_at ?? 'currently'}
-            </h4>
+            <ExperienceDate experience={experience} />
 
             <p>{experience.description}</p>
 
