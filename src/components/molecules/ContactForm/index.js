@@ -3,7 +3,7 @@ import useApi from '../../../hooks/api'
 
 function Vapo({ sentSuccessfully }) {
   if (sentSuccessfully)
-    return <span>Vapo! Your message has been sent successfully!</span>
+    return <span>Your message has been sent successfully!</span>
   return null
 }
 
